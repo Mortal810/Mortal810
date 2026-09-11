@@ -1,0 +1,15 @@
+{
+  "python": "3.13.5",
+  "packages": {
+    "fastapi": "0.128.2",
+    "uvicorn": "0.48.0",
+    "huggingface_hub": "1.16.1",
+    "pydantic": "2.13.4",
+    "python-dotenv": "1.2.2",
+    "Pillow": "12.3.0",
+    "httpx": "0.28.1",
+    "pytest": "9.0.2"
+  },
+  "tests": "24 passed; mocked/local only",
+  "live_huggingface_call": "not performed"
+}

@@ -1,0 +1,32 @@
+{
+  "local_request_id": "8f0000efdd2d4faeb24dfb7ff605ad79",
+  "started_at_utc": "2026-09-11T08:57:51+00:00",
+  "experiment": "v1",
+  "model": "XLabs-AI/flux-RealismLora",
+  "provider": "fal-ai",
+  "parameter_mode": "explicit",
+  "requested_parameters": {
+    "model": "XLabs-AI/flux-RealismLora",
+    "prompt": "A realistic photograph of a bicycle parked beside a wet university walkway after rain, with trees in the background.",
+    "width": 1024,
+    "height": 768,
+    "num_inference_steps": 28,
+    "guidance_scale": 3.5,
+    "seed": 42
+  },
+  "sdk_version": "1.31.0",
+  "upstream_http_status": null,
+  "upstream_status_note": "SDK 的成功返回值为图像；未截获上游 HTTP 状态，不将本地 200 冒充上游状态。",
+  "request_id_note": "local_request_id 由本程序生成，不是 Hugging Face 的官方请求编号。",
+  "event": "generation_completed",
+  "finished_at_utc": "2026-09-11T08:58:07+00:00",
+  "elapsed_seconds": 16.053,
+  "image_file": "8f0000efdd2d4faeb24dfb7ff605ad79.png",
+  "image_sha256": "d817ac1ccd25a49dfac6bf30cae4eba62f4536d621e1da3c547060cbfb9cdfc7",
+  "actual_size": {
+    "width": 1024,
+    "height": 768
+  },
+  "image_url": "/outputs/8f0000efdd2d4faeb24dfb7ff605ad79.png",
+  "record_url": "/outputs/8f0000efdd2d4faeb24dfb7ff605ad79.json"
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>现实的一帧 · Flux 图像实验室</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">SOFTWARE ENGINEERING / PRACTICE 01</p>
+    <h1>现实的一帧<span>Flux 图像实验室</span></h1>
+    <p class="subtitle">从一句描述到一张图像，把每次尝试保留下来。</p>
+    <div class="badges"><span>指定模型 · XLabs-AI/flux-RealismLora</span><span>服务商 · fal-ai</span><span id="config">正在读取本地配置…</span></div>
+  </header>
+  <div class="workspace">
+    <section class="panel"><div class="section-title"><span class="number">01</span><h2>设计一次生成</h2></div>
+      <p class="muted">密钥只在后端读取；请勿把 Token、真实个人隐私写入提示词。</p>
+      <form id="generate-form">
+        <label for="prompt">场景提示词 <small id="count">0 / 1500</small></label>
+        <textarea id="prompt" maxlength="1500" rows="8" required placeholder="由你填写：主体是什么？在哪里？光线、材质和构图有哪些具体要求？"></textarea>
+        <div class="row"><div><label for="experiment">实验编号</label><input id="experiment" value="v1" pattern="[A-Za-z0-9_-]{1,24}" maxlength="24" required></div>
+          <div><label for="mode">参数模式</label><select id="mode"><option value="explicit">明确参数 · 适合对照</option><option value="minimal">简化参数 · 用于排错</option></select></div></div>
+        <div class="row"><div><label for="seed">随机种子</label><input id="seed" type="number" value="42" min="0" max="4294967295" step="1" required></div>
+          <div><label for="steps">推理步数</label><input id="steps" type="number" value="28" min="10" max="40" step="1" required></div></div>
+        <div class="row"><div><label for="width">宽度</label><select id="width"><option>512</option><option>768</option><option selected>1024</option></select></div>
+          <div><label for="height">高度</label><select id="height"><option>512</option><option selected>768</option><option>1024</option></select></div></div>
+        <p class="muted" id="mode-note">固定 seed 便于比较；服务商升级等因素仍可能影响复现。</p>
+        <button type="submit" id="generate-button">生成图像 <span aria-hidden="true">↗</span></button>
+        <p class="muted">每次提交可能产生费用。不会自动重试；超时后先检查用量。</p>
+      </form>
+    </section>
+    <section class="panel result-panel"><div class="section-title"><span class="number">02</span><h2>查看生成结果</h2></div>
+      <div id="status" role="status" aria-live="polite">尚未发起生成请求</div>
+      <div id="empty" class="empty"><strong>你的下一帧，尚待生成。</strong><p>完成左侧描述后开始。这里不会预置或伪造“调用成功”的图片。</p></div>
+      <img id="result-image" alt="本次通过指定 Flux 模型生成的图像" hidden>
+      <div id="result-meta" class="result-meta"></div>
+      <div id="downloads" class="downloads" hidden><a id="image-link" download>保存原图</a><a id="record-link" download>保存本次参数与记录</a></div>
+    </section>
+  </div>
+  <section class="panel history"><div class="section-title"><span class="number">03</span><h2>本页会话记录</h2></div>
+    <p class="muted">本地 HTTP 状态不等于上游 HTTP 状态；详细记录另存于 outputs/ 与 logs/。刷新页面只清空本页列表。</p>
+    <div class="table-wrap"><table><thead><tr><th>时间</th><th>实验</th><th>结果 / 本地状态</th><th>耗时</th><th>本地请求编号</th></tr></thead><tbody id="history-body"></tbody></table></div>
+    <details><summary>最近一次返回的结构化记录</summary><pre id="raw-record">尚无记录</pre></details>
+  </section>
+  <footer>课程演示仅限本机使用 · 图像为 AI 生成，不是真实场景的摄影证据。</footer>
+</main>
+</body></html>

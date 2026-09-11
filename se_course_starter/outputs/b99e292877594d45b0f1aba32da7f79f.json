@@ -1,0 +1,32 @@
+{
+  "local_request_id": "b99e292877594d45b0f1aba32da7f79f",
+  "started_at_utc": "2026-09-11T08:46:48+00:00",
+  "experiment": "v1",
+  "model": "XLabs-AI/flux-RealismLora",
+  "provider": "fal-ai",
+  "parameter_mode": "explicit",
+  "requested_parameters": {
+    "model": "XLabs-AI/flux-RealismLora",
+    "prompt": "A realistic documentary photograph of a single bicycle parked beside\na wet university walkway after light rain. The bicycle is in the\nforeground, green trees and a plain campus building are in the\nbackground. Eye-level view, soft overcast daylight, natural colors,\nrealistic proportions, subtle water reflections, detailed metal and\nrubber textures, ordinary everyday atmosphere.",
+    "width": 1024,
+    "height": 768,
+    "num_inference_steps": 28,
+    "guidance_scale": 3.5,
+    "seed": 42
+  },
+  "sdk_version": "1.31.0",
+  "upstream_http_status": null,
+  "upstream_status_note": "SDK 的成功返回值为图像；未截获上游 HTTP 状态，不将本地 200 冒充上游状态。",
+  "request_id_note": "local_request_id 由本程序生成，不是 Hugging Face 的官方请求编号。",
+  "event": "generation_completed",
+  "finished_at_utc": "2026-09-11T08:47:04+00:00",
+  "elapsed_seconds": 16.266,
+  "image_file": "b99e292877594d45b0f1aba32da7f79f.png",
+  "image_sha256": "ccec84aeb17a8272dd3c82bc00dde8bac243b1e8cb53153d58d4286f36a3a6b4",
+  "actual_size": {
+    "width": 1024,
+    "height": 768
+  },
+  "image_url": "/outputs/b99e292877594d45b0f1aba32da7f79f.png",
+  "record_url": "/outputs/b99e292877594d45b0f1aba32da7f79f.json"
+}
