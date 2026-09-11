@@ -12,7 +12,7 @@
 
 | 作品或经历 | 解决的问题 | 我完成的部分 | 当前状态 | 证据 |
 | --- | --- | --- | --- | --- |
-| Flux 写实图像生成实践（软件工程课程作业） | 通过 Hugging Face API 交互式生成接近真实的图像 | 提示词设计、真实调用、前端联调、证据记录（项目骨架为 AI 辅助） | 已完成 | 仓库链接：https://github.com/Mortal810/Mortal810/博客链接：https://i.cnblogs.com/posts |
+| Flux 写实图像生成实践（软件工程课程作业） | 通过 Hugging Face API 交互式生成接近真实的图像 | 提示词设计、真实调用、前端联调、证据记录（项目骨架为 AI 辅助） | 已完成 | 仓库链接：https://github.com/Mortal810/Mortal810/ 博客链接：https://www.cnblogs.com/Mortal810 |
 | 计算机与大数据学院昆冈众创第二课堂“金课”第8期的课后项目 | 红色校史馆网页的搭建 | 校园打卡点页面的设计 | 可运行 | 仓库链接：https://github.com/yolo-yi/collection-kungang-course |
 
 ## 当前能力与自我评估
@@ -46,5 +46,5 @@
 
 ## 找到我的学习记录
 
-- 博客园：https://i.cnblogs.com/posts
+- 博客园：https://www.cnblogs.com/Mortal810
 - 软件工程实践仓库：https://github.com/Mortal810/Mortal810
